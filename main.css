@@ -1,0 +1,16 @@
+body {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    text-align: center;
+    width: 50%;
+    margin-left: 300px;
+}
+

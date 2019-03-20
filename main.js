@@ -5,8 +5,7 @@ let elBody = document.getElementById('myBody')
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm,', '7pm', '8pm']
 let locations = []
 
-
-
+//location instances
 let firstPike = {
     storeLoc = '1st and Pike',
     minCostumer = 23,
@@ -63,3 +62,17 @@ let alki = {
 }
 
 locations.push(firstPike, seaTac, seattleCenter, capHill, alki)
+
+let elPikeTitle = document.createElement('h2')
+elBody.appendChild(elPikeTitle)
+elPikeTitle.innerText = Pike.storeName
+
+let elList = document.createElement('ul')
+elBody.appendChild(elList)
+
+for(let i = 0; i < hours.length; i++) {
+  console.log(hours[i], 'Total number of cookies', Pike.cookiesSoldPerHour())
+  let elListItem = document.createElement('li')
+  elList.appendChild(elListItem)
+  elListItem.innerText = hours[i] + ':' + Pike.cookiesSoldPerHour() + ' cookies sold'
+}
